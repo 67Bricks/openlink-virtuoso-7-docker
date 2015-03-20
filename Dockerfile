@@ -43,5 +43,6 @@ RUN chmod +x /$VIRT_HOME/virtuoso_helper.sh
 
 EXPOSE 1111
 EXPOSE 8890
-VOLUME ["/var/lib/virtuoso/db"]
+# We don't want to mount the data directory as a volume
+# VOLUME ["/var/lib/virtuoso/db"]
 CMD ["/sbin/my_init"]
